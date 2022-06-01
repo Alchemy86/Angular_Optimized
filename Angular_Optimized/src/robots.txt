@@ -1,0 +1,18 @@
+﻿User-agent: *
+Disallow: /rtadmin/
+Disallow: /regtransfers/
+Disallow: /pricematch/
+Disallow: /purchase/orderfinished?og=
+Disallow: /purchase/orderbreakdown?og=
+Disallow: /purchase/buyplatemyrt
+Disallow: /purchase/buyplate/
+Disallow: /purchase/saveenquire
+Disallow: /search/offer/
+Disallow: /search/textresultstome?plate=
+Disallow: /search/payplan?plateId=
+Disallow: /regalert/
+Disallow: /media/pdfs/
+Disallow: /content/ngg_tag/
+
+
+Sitemap: https://www.regtransfers.co.uk/sitemap.xml

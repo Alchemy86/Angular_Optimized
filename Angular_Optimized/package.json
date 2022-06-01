@@ -11,7 +11,8 @@
     "i18n:extract": "ng xi18n",
     "compodoc:build": "compodoc -p tsconfig.doc.json",
     "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
-    "compodoc:serve": "compodoc -s"
+    "compodoc:serve": "compodoc -s",
+    "optimizecss": "gulp --gulpfile optimize-css.gulpfile.js"
   },
   "private": true,
   "dependencies": {
@@ -41,17 +42,25 @@
     "@angular/cli": "~13.3.7",
     "@angular/compiler-cli": "~13.3.0",
     "@angular/localize": "^13.3.11",
+    "@compodoc/compodoc": "^1.1.19",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
-    "@compodoc/compodoc": "^1.1.19",
     "brotli-webpack-plugin": "^1.1.0",
     "compression-webpack-plugin": "^10.0.0",
+    "gulp": "^4.0.2",
+    "gulp-brotli": "^3.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-filter": "^7.0.0",
+    "gulp-gzip": "^1.4.2",
+    "gulp-purify-css": "^0.1.0",
+    "gulp-rename": "^2.0.0",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.6.2"
+    "typescript": "~4.6.2",
+    "webpack": "^5.72.1"
   }
 }

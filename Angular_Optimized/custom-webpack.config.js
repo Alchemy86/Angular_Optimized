@@ -1,7 +1,7 @@
 ﻿const CompressionPlugin = require(`compression-webpack-plugin`);
 const BrotliPlugin = require(`brotli-webpack-plugin`);
-const path = require(`path`);
 const zlib = require("zlib");
+
 module.exports = {
   plugins:[
 /*    new BrotliPlugin({
