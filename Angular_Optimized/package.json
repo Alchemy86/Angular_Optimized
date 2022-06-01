@@ -7,7 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "i18n:extract": "ng xi18n"
+    "i18n:extract": "ng xi18n",
+    "compodoc:build": "compodoc -p tsconfig.doc.json",
+    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
+    "compodoc:serve": "compodoc -s"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +42,7 @@
     "@angular/localize": "^13.3.11",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "@compodoc/compodoc": "^1.1.19",
     "brotli-webpack-plugin": "^1.1.0",
     "compression-webpack-plugin": "^10.0.0",
     "jasmine-core": "~4.0.0",
