@@ -25,6 +25,15 @@ Finally, run locally in https:
 http-server -g -b -S -C cert.pem -o -c31536000
 ```
 
+## Stroybook
+
+https://medium.com/loftbr/angular-storybook-6d8ae099ab96
+
+```angular2html
+npm run storybook
+```
+
+This can then be launched and configuration seen.
 
 # AngularOptimized
 
