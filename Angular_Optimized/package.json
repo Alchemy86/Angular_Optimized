@@ -6,6 +6,7 @@
     "start": "ng serve",
     "serve:production": "ng serve --configuration production",
     "build": "ng build --aot --configuration production",
+    "postbuild": "npm run optimizecss",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "i18n:extract": "ng xi18n",
@@ -60,6 +61,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "lighthouse": "^9.6.1",
     "typescript": "~4.6.2",
     "webpack": "^5.72.1"
   }

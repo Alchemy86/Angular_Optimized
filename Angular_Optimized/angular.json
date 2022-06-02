@@ -43,6 +43,7 @@
               "src/assets",
               "src/key.pem",
               "src/cert.pem",
+              "src/budget.json",
               "src/robots.txt",
               "src/manifest.webmanifest"
             ],
@@ -116,6 +117,7 @@
               "src/favicon.ico",
               "src/key.pem",
               "src/cert.pem",
+              "src/budget.json",
               "src/assets",
               "src/robots.txt",
               "src/manifest.webmanifest"
