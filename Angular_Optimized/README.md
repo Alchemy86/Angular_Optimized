@@ -1,3 +1,31 @@
+## Optimized Angular
+
+### Run Locally
+```angular2html
+npm run build
+```
+
+This will output the dist output. Included are certs for locally running with https:
+
+```angular2html
+Install server: npm install http-server -g
+choco install mkcert
+mkcert -install
+```
+
+Create a certificate and rename the files
+```angular2html
+mkcert 0.0.0.0 localhost 127.0.0.1 ::1
+0.0.0.0+3-key.pem -> key.pem
+0.0.0.0+3.pem -> cert.pem
+```
+
+Finally, run locally in https:
+```angular2html
+http-server -g -b -S -C cert.pem -o -c31536000
+```
+
+
 # AngularOptimized
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.

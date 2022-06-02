@@ -41,6 +41,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/key.pem",
+              "src/cert.pem",
               "src/robots.txt",
               "src/manifest.webmanifest"
             ],
@@ -112,6 +114,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
+              "src/key.pem",
+              "src/cert.pem",
               "src/assets",
               "src/robots.txt",
               "src/manifest.webmanifest"

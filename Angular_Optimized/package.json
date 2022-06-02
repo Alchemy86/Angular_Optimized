@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "serve:production": "ng serve --configuration production",
-    "build": "ng build",
+    "build": "ng build --aot --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "i18n:extract": "ng xi18n",
