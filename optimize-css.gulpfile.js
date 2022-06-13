@@ -76,12 +76,12 @@ gulp.task("css-br", () => {
 /*
 Delete style output of Angular prod build
 */
-gulp.task("clear-ng-css", () => {
+/*gulp.task("clear-ng-css", () => {
   return gulp
-    .src("./dist/angular-optimized/*")
-    .pipe(filter(["**/styles*.css"]))
+    .src("./dist/angular-optimized/!*")
+    .pipe(filter(["**!/styles*.css"]))
     .pipe(clean({ force: true }));
-});
+});*/
 
 /*
  ### Order of Tasks ###
