@@ -93,6 +93,6 @@ Delete style output of Angular prod build
  */
 exports.default = series(
   "purifyCSS",
-  parallel("css-gzip", "css-br"),
-  "clear-ng-css"
+  parallel("css-gzip", "css-br")
+  //"clear-ng-css"
 );
