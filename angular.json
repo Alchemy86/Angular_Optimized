@@ -25,7 +25,6 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "indexTransform": "./index-html-transform.js",
             "customWebpackConfig": {
               "path": "./custom-webpack.config.js",
               "mergeRules": {
