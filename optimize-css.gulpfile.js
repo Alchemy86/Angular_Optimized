@@ -7,6 +7,8 @@ const clean = require("gulp-clean");
 const rename = require("gulp-rename");
 const { series, parallel } = require("gulp");
 
+// COMPRESSION HERE UNUSED - CUSTOM CONFIG IS COMPRESSING
+
 // Purify unused code.
 gulp.task('purifyCSS', () => {
   return gulp.src('./dist/angular-optimized/*')
@@ -66,10 +68,10 @@ Steps:
 Read the optimized CSS in the Step #1
 Apply brotli compression
 */
-gulp.task("css-br", () => {
+/*gulp.task("css-br", () => {
   return gulp
-    .src("./dist/angular-optimized/*")
-    .pipe(filter(["**/*.css", "!**/*.br.*", "!**/*.gzip.*"]))
+    .src("./dist/angular-optimized/!*")
+    .pipe(filter(["**!/!*.css", "!**!/!*.br.*", "!**!/!*.gzip.*"]))
     .pipe(brotli.compress())
     .pipe(
       rename(path => {
@@ -85,7 +87,7 @@ gulp.task("css-br", () => {
       })
     )
     .pipe(gulp.dest("./dist/angular-optimized"));
-});
+});*/
 
 // # 4 | Clear ng-build CSS
 /*
@@ -108,7 +110,7 @@ Delete style output of Angular prod build
  */
 exports.default = series(
   "purifyCSS",
-  "autoprefixer",
-  parallel("css-gzip", "css-br")
+  "autoprefixer"
+  //parallel("css-gzip", "css-br")
   //"clear-ng-css"
 );
