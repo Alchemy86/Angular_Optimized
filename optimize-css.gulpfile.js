@@ -6,8 +6,25 @@ const brotli = require("gulp-brotli");
 const clean = require("gulp-clean");
 const rename = require("gulp-rename");
 const { series, parallel } = require("gulp");
+const sourcemaps = require("gulp-sourcemaps");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
 
 // COMPRESSION HERE UNUSED - CUSTOM CONFIG IS COMPRESSING
+
+// Corrects a metronic related css issue
+// autoprefixer: Replace color-adjust to print-color-adjust. The color-adjust shorthand is currently deprecated
+/*gulp.task('autoprefixer', () => {
+  const autoprefixer = require('autoprefixer')
+  const sourcemaps = require('gulp-sourcemaps')
+  const postcss = require('gulp-postcss')
+
+  return gulp.src('./src/!*.css')
+    .pipe(sourcemaps.init())
+    .pipe(postcss([ autoprefixer() ]))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist/angular-optimized'))
+})*/
 
 // Purify unused code.
 gulp.task('purifyCSS', () => {
@@ -28,20 +45,6 @@ gulp.task('purifyCSS', () => {
     )
     .pipe(gulp.dest('./dist/angular-optimized'));
 });
-
-// Corrects a metronic related css issue
-// autoprefixer: Replace color-adjust to print-color-adjust. The color-adjust shorthand is currently deprecated
-gulp.task('autoprefixer', () => {
-  const autoprefixer = require('autoprefixer')
-  const sourcemaps = require('gulp-sourcemaps')
-  const postcss = require('gulp-postcss')
-
-  return gulp.src('./src/*.css')
-    .pipe(sourcemaps.init())
-    .pipe(postcss([ autoprefixer() ]))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./dist/angular-optimized'))
-})
 
 // # 2 | Genereate GZIP files
 /*
@@ -109,8 +112,8 @@ Delete style output of Angular prod build
  * Clear the temp folder
  */
 exports.default = series(
-  "purifyCSS",
-  "autoprefixer"
+  //"autoprefixer",
+  "purifyCSS"
   //parallel("css-gzip", "css-br")
   //"clear-ng-css"
 );
