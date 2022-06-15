@@ -14,17 +14,17 @@ const autoprefixer = require("autoprefixer");
 
 // Corrects a metronic related css issue
 // autoprefixer: Replace color-adjust to print-color-adjust. The color-adjust shorthand is currently deprecated
-/*gulp.task('autoprefixer', () => {
+gulp.task('autoprefixer', () => {
   const autoprefixer = require('autoprefixer')
   const sourcemaps = require('gulp-sourcemaps')
   const postcss = require('gulp-postcss')
 
-  return gulp.src('./src/!*.css')
+  return gulp.src('./src/*.css')
     .pipe(sourcemaps.init())
     .pipe(postcss([ autoprefixer() ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/angular-optimized'))
-})*/
+})
 
 // Purify unused code.
 gulp.task('purifyCSS', () => {
@@ -112,7 +112,7 @@ Delete style output of Angular prod build
  * Clear the temp folder
  */
 exports.default = series(
-  //"autoprefixer",
+  "autoprefixer",
   "purifyCSS"
   //parallel("css-gzip", "css-br")
   //"clear-ng-css"
